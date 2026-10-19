@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paket Rahasia 💌</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="frame">
+
+  <!-- 1. PINTU -->
+  <section class="screen active" id="s-intro">
+    <div class="big-emoji">🚪</div>
+    <h2>Eh, tunggu...</h2>
+    <p>Ada paket rahasia seru banget khusus buat kamu!</p>
+    <button class="btn" data-next="s-match">Ketuk Pintu</button>
+  </section>
+
+  <!-- 2. COCOKIN KARTU -->
+  <section class="screen" id="s-match">
+    <h2>🧩 Cocokin Kartu (4x6)</h2>
+    <p>Cari sepasang emoji yang sama ya!</p>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- 3. PERTANYAAN RANDOM -->
+  <section class="screen" id="s-quiz">
+    <div class="big-emoji">😢☁️</div>
+    <h2>Pertanyaan Random 1</h2>
+    <p class="quote">"Kucing apa yang kuno banget?"</p>
+    <button class="btn" data-next="s-answer">Tebak Jawabannya 🤔</button>
+  </section>
+
+  <section class="screen" id="s-answer">
+    <div class="big-emoji">😎☁️</div>
+    <h2>Jawabannya...</h2>
+    <p class="quote">"Kucing-ta kamu sejak dulu kala. Eaaaa~"</p>
+    <button class="btn" data-next="s-catch">Main Game Lagi! 🎮</button>
+  </section>
+
+  <!-- 4. TANGKAP HATI -->
+  <section class="screen" id="s-catch">
+    <h2>🍎 Game: Tangkap Hati!</h2>
+    <p>Tangkap 10 ❤️ &amp; hindari 💣! Skor: <b id="score">0</b></p>
+    <div class="arena" id="arena">
+      <div class="basket" id="basket">🧺</div>
+    </div>
+    <div class="pad">
+      <button class="btn cyan" id="btn-left" aria-label="Kiri">◀</button>
+      <button class="btn cyan" id="btn-right" aria-label="Kanan">▶</button>
+    </div>
+  </section>
+
+  <!-- 5. PILIH SALAH SATU -->
+  <section class="screen" id="s-choice">
+    <h2>PILIH SALAH SATU! 🫣</h2>
+    <p>Jawab jujur ya, gak boleh bohong!</p>
+    <button class="btn wide" data-next="s-pick">A. Kangen Aku</button>
+    <button class="btn wide" data-next="s-pick">B. Kangen Aku Banget</button>
+  </section>
+
+  <section class="screen" id="s-pick">
+    <div class="confetti" id="confetti"></div>
+    <h2>Pilihan Cerdas! 🎉</h2>
+    <p>Gak bisa mengelak kan~ Memang pilihan yang sangat tepat! 😜</p>
+    <button class="btn" data-next="s-croc">Ada yang Ngintip tuh.. 🐊</button>
+  </section>
+
+  <!-- 6. BUAYA -->
+  <section class="screen" id="s-croc">
+    <h2>Awas Ada Buaya! 🐊</h2>
+    <div class="big-emoji">🐊</div>
+    <p>Ada buaya darat centil mau lewat, jangan sampai terpesona ya!</p>
+    <button class="btn" data-next="s-twist">Intip Buayanya 👀</button>
+  </section>
+
+  <section class="screen" id="s-twist">
+    <h2>Plot Twist! 🌸</h2>
+    <div class="big-emoji">🐊💐</div>
+    <p class="quote">"Tenang, buaya yang ini jinak..."</p>
+    <p>Dia cuma mau bilang kalau kamu manis dan berharga banget hari ini!</p>
+    <button class="btn" data-next="s-final">Klik Kejutan Akhir 🎁</button>
+  </section>
+
+  <!-- 7. PENUTUP + BALAS KE WHATSAPP -->
+  <section class="screen" id="s-final">
+    <div class="hearts" id="hearts"></div>
+    <h1>LOVE YOU <span class="nama"></span></h1>
+    <p class="soft">Terima kasih sudah main sampai akhir! ✨</p>
+    <p>Semoga hari-hari kamu selalu dipenuhi kebahagiaan dan senyuman lucu kayak game ini ya! ❤️</p>
+    <div class="big-emoji">🥰🐰✨</div>
+
+    <div class="reply">
+      <p class="reply-title"> balas 💬 </p>
+      <textarea id="balasan" rows="3" placeholder="Atau tulis balasanmu sendiri di sini..."></textarea>
+      <button class="btn wide" id="btn-wa">Kirim ke WhatsApp 💌</button>
+    </div>
+  </section>
+
+</main>
+<script src="script.js"></script>
+</body>
+</html>
